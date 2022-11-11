@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helaer | Victoria Medical Center Jakarta</title>
+    <link rel="shortcut icon" href="img/logo healer.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery.js"></script>
+    <script src="aos.js"></script>
+    <link rel="stylesheet" href="aos.css">
+  </head>
+  <body>
+    <div class="nav">
+      <img src="img/logo healer.png" alt="" data-aos="fade-down" data-aos-duration="800">
+      <div class="area-nav">
+        <div class="nav-link" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">
+          <a class="link-nav" href="index.html #beranda">Beranda</a>
+        </div>
+        <div class="nav-link" data-aos="fade-down" data-aos-duration="800" data-aos-delay="150">
+          <a class="link-nav" href="index.html #layanan">Layanan</a>
+        </div>
+        <div class="nav-link" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
+          <a class="link-nav" href="lokasi.html">Lokasi</a>
+        </div>
+        <div class="nav-link" data-aos="fade-down" data-aos-duration="800" data-aos-delay="250">
+          <a class="link-nav" href="artikel.html">Artikel</a>
+        </div>
+      </div>
+      <img src="img/menu.png" alt="" id="open-nav" data-aos="fade-down" data-aos-duration="800">
+      <a class="nav-login" href="login.html" data-aos="fade-down" data-aos-duration="800">LOGIN</a>
+    </div>
+    <div class="nav-menu">
+      <div class="close-btn">
+        <img src="img/close.png" alt="" id="close-nav">
+      </div>
+      <a href="index.html #beranda" id="nav-link">Beranda</a>
+      <a href="index.html #layanan" id="nav-link1">Layanan</a>
+      <a href="lokasi.html" id="nav-link2">Lokasi</a>
+      <a href="artikel.html" id="nav-link3">Artikel</a>
+      <a href="login.html" id="login-nav-menu">LOGIN</a>
+    </div>
+
+    <div class="header-healer">
+      <h1>Healer Hospital Kuta</h1>
+    </div>
+    <div class="area-lokasi-detail">
+      <img src="img/rumah sakit.jpg" alt="" />
+      <div class="text-detail-lokasi">
+        <h1>Tentang Kami</h1>
+        <p>
+          Berada Di Jalan Raya Kuta, Healer Hospital Kuta Hadir Di Kabupaten
+          Badung sebagai Bagian dari Healer Hospital Group. Healer berkomitmen
+          untuk memberikan pelayanan kesehatan melalui berbagai jenis pelayanan
+          medis yang berkualitas.menggunakan perlengkapan dan peralatan
+          kedokteran berteknologi modern, penanganan oleh para dokter spesialis,
+          dokter umum, perawat, dan staf penunjang yang menerapkan standar
+          tinggi dalam keamanan dan keselamatan pasien.
+        </p>
+      </div>
+    </div>
+    <div class="map">
+      <iframe
+        id="map"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31555.975307366854!2d115.1696896!3d-8.6441984!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd238cfa9704293%3A0xb90785bd6a37c482!2sSMK%20Wira%20Harapan!5e0!3m2!1sid!2sid!4v1666425507126!5m2!1sid!2sid"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <div class="footer container">
+      <div class="footer-1 column">
+        <div class="logo-footer">
+          <img src="img/logo healer.png" alt="" />
+          <h1>Healer</h1>
+        </div>
+        <p>Mulai Hidup Sehat <br />Bersama Kami</p>
+        <div class="sosial">
+          <img src="img/facebook.png" alt="" />
+          <img src="img/instagram.png" alt="" />
+          <img src="img/twitter.png" alt="" />
+        </div>
+      </div>
+      <div class="footer-2 column">
+        <h1>Link</h1>
+        <a href="index.html #beranda">Beranda</a>
+        <a href="index.html #layanan">Layanan</a>
+        <a href="lokasi.html">Lokasi</a>
+        <a href="artikel.html">Artikel</a>
+      </div>
+      <div class="footer-3 column">
+        <h1>Bantuan</h1>
+        <a href="konsultasi.html">Konsultasi Dokter</a>
+        <a href="lokasi.html">Cari Rumah Sakit</a>
+        <a href="trainer.html">Konsultasi Olah Raga</a>
+      </div>
+      <div class="footer-4 column">
+        <h1>Hubungi Kami</h1>
+        <p>info@healerhospital.id</p>
+        <p>+62 22 2222-2222</p>
+      </div>
+    </div>
+
+    <script>
+      AOS.init();
+      $(function () {
+        var navbar = $(".nav");
+        var navlogin = $(".nav-login");
+
+        $(window).scroll(function () {
+          if ($(window).scrollTop() <= 40) {
+            navbar.removeClass("nav-scroll");
+            $(".link-nav").css("color", "#fff");
+            navlogin.removeClass("nav-login-scroll");
+            $(".link-nav").mouseleave(function () {
+              $(this).css("color", "#fff");
+            });
+          } else {
+            navbar.addClass("nav-scroll");
+            $(".link-nav").css("color", "black");
+            navlogin.addClass("nav-login-scroll");
+            $(".link-nav").mouseleave(function () {
+              $(this).css("color", "#000");
+            });
+          }
+        });
+      });
+      $(".link-nav").mouseenter(function () {
+        $(this).css("color", "#3ec70b");
+      });
+
+      $("#open-nav").click(function () {
+        $(".nav-menu").toggleClass("active");
+      });
+      $("#close-nav").click(function () {
+        $(".nav-menu").removeClass("active");
+      });
+      $("#nav-link").click(function () {
+        $(".nav-menu").removeClass("active");
+      });
+      $("#nav-link1").click(function () {
+        $(".nav-menu").removeClass("active");
+      });
+      $("#nav-link2").click(function () {
+        $(".nav-menu").removeClass("active");
+      });
+      $("#nav-link3").click(function () {
+        $(".nav-menu").removeClass("active");
+      });
+    </script>
+  </body>
+</html>
